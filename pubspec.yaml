@@ -1,0 +1,95 @@
+name: flutter_boilerplate
+description: boilerplate
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+
+# STATE MANAGE
+  get :
+  get_storage:
+
+# NETWORK
+  intl :
+  logger :
+  dio :
+  cached_network_image :
+
+
+# PUSH
+  firebase_core:
+  firebase_messaging: ^10.0.5
+  flutter_local_notifications: ^8.0.0
+
+# UI
+  pull_to_refresh: ^2.0.0
+
+# UTILITY
+  flutter_svg:
+  webview_flutter: ^2.0.10
+  photo_view:
+  package_info:
+  fluttertoast: ^8.0.8
+  font_awesome_flutter: ^9.1.0
+  image_picker:
+  url_launcher:
+
+# AUTH
+  apple_sign_in_safety:
+
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+
+  flutter_launcher_icons: "^0.9.2"
+  flutter_test:
+    sdk: flutter
+  retrofit_generator:
+    git:
+      url: https://github.com/trevorwang/retrofit.dart
+      ref: 16e567715b6a440f3b5135ed63f717e62f149f6f
+      path: generator
+  build_runner:
+  json_serializable:
+  mock_web_server:
+  flutter_lints: ^1.0.0
+
+
+
+
+
+builders:
+  json_serializable:
+    options:
+      any_map: false
+      checked: false
+      create_factory: true
+      create_to_json: true
+      #      disallow_unrecognized_keys: false
+      #      explicit_to_json: false
+      generic_argument_factories: true
+      ignore_unannotated: false
+#      include_if_null: true
+#      ignored_lint_rules: []
+
+analyzer:
+  strong-mode:
+    #    implicit-dynamic: false
+    implicit-casts: false
+  enable-experiment:
+    - spread-collections
+    - control-flow-collection
+    - set-literals
+    - constant-update-2018
+
+flutter :
+#  assets:
+  uses-material-design: true
+#  fonts:
